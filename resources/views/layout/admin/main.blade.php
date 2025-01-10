@@ -651,6 +651,9 @@
     <!-- SPARKLINE JS-->
     <script src="assets/js/jquery.sparkline.min.js"></script>
 
+    <!-- SIDE MENU JS-->
+    <script src="assets/plugins/sidemenu/sidemenu.js"></script>
+
     <!-- Sticky js -->
     <script src="assets/js/sticky.js"></script>
 

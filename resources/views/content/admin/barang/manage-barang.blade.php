@@ -25,6 +25,11 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Table head</h3>
+                                <div class="card-options">
+                                    <a class="btn btn-primary" href="{{ route('barang-create') }}">
+                                        <i class="fe fe-plus"> Add Barang</i>
+                                    </a>
+                                </div>
                             </div>
                             <div class="card-body">
                                 @if(Session::has('succes'))
@@ -42,8 +47,10 @@
                                         <thead class="table-primary">
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Username</th>
-                                                <th>Email</th>
+                                                <th>Image</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Price</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -82,7 +89,7 @@
         $('#user-data').DataTable({
             serverside:true,
             ajax: {
-                url:'{{ route('user-datatable') }}',
+                url:'{{ route('barang-datatable') }}',
                 type:'POST'
             },
             columnDefs: [
@@ -112,8 +119,10 @@
             ],
             columns: [
                 {data : 'id'},
-                {data : 'username'},
-                {data : 'email'},
+                {data : 'image'},
+                {data : 'name'},
+                {data : 'description'},
+                {data : 'price'},
                 {data : 'id'},
             ]
         });
